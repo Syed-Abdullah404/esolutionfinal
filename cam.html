@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <section class="bg-dark">
+
+      
+   <div class="container-fluid">
+        <div class="row text-center align-items-center justify-content-center" style="height:100vh;">
+            <div class="col-sm-12 col-md-6">
+                <h1 class="text-white mb-5">
+                    Capture Image
+                </h1>
+                <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" id="accesscamera">
+                    Capture Image
+                  </button> 
+            </div>
+
+        </div>
+   </div>
+</section>
+   <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Take And Upload Photo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <div id="my_camera" class="d-block mx-auto rounded overflow-hidden"></div>
+                <div id="results" class="d-none"></div>
+                <form method="post" id="photoframe">
+                    <input type="hidden"  id="photoStore" name="photoStore" value="">
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning mx-auto text-white" id="takephoto">Capture Photo</button>
+          <button type="button" class="btn btn-warning mx-auto text-white d-none" id="retakephoto">Retake</button>
+          <button type="submit" class="btn btn-warning mx-auto text-white d-none" id="uploadphoto" form="photoframe">Upload</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="cam.js"></script>
+   
+  </body>
+</html>

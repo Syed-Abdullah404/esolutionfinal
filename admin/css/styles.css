@@ -1,0 +1,835 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sidebar{
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 78px;
+  background: white;
+
+ 
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+.sidebar.open{
+  width: 250px;
+}
+.logo-details{
+  height: 60px;
+  display: flex;
+ 
+  position: relative;
+ 
+}
+.logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  
+  transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+
+
+.logo-details #btn{
+  position: relative;
+  top: 50%;
+  color: #0B0452;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 40px;
+ margin-top: 23px;
+  cursor: pointer;
+  
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+  
+}
+
+.heading{
+  margin: auto;
+  color: #0B0452;
+}
+.sidebar i{
+  color: #0B0452;
+  height: 60px;
+  min-width: 20px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+  
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+
+
+
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: white;
+}
+.sidebar li a:hover{
+  background: none;
+}
+.sidebar li a .links_name{
+  color: #0B0452;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: rgb(230, 230, 230);
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  
+}
+
+.top-section{
+  position: fixed;
+  background-color: #ffffff;
+  min-height: 100px;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .top-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.top-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+  
+}
+
+
+
+.form-label{
+  font-weight: bold;
+  
+}
+.form-control:focus{
+  box-shadow: none;
+  border: 1px solid #0B0452; 
+}
+
+.form-select:focus{
+  box-shadow: none;
+  border: 1px solid #0B0452; 
+  
+}
+#button-addon2{
+  background-color:#0B0452;
+  color: white;
+  border: 1px solid #0B0452;
+  overflow: inherit; 
+}
+#button-addon2:hover{
+  background-color:#3399CC;
+  color: white;
+  border: 1px solid #3399CC;
+  
+  box-shadow:none;
+}
+#button-addon2:focus{
+  background-color:#3399CC;
+  color: white;
+  border: 1px solid #3399CC;
+  
+  box-shadow:none;
+}
+.th{
+  background-color: #0B0452;
+  color: white;
+}
+
+#btn3{
+  background-color: #0B0452;
+  color: white;
+}
+
+
+.body-section{
+  position: relative;
+  background: #ffffff;
+  
+  
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+ margin-top: 150px;
+}
+.sidebar.open ~ .body-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.footer-section{
+  position: relative;
+  background: #ffffff;
+  
+  
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+
+}
+.sidebar.open ~ .footer-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.dropdown .dropdown-menu .dropdown-item{
+  background-color: white;
+  color: #0B0452;
+}
+.dropdown .dropdown-menu .dropdown-item:hover{
+  background-color: #0B0452;
+  color: white ;
+}
+.dropdown:hover .dropdown-menu {
+  
+  display: block;
+}
+#dropdownMenuButton1:focus{
+  box-shadow: none;
+}
+
+.action .dropdown-menu .dropdown-item:hover{
+  background-color: #0B0452;
+  color: white;
+}
+
+.action .btnaction{
+  background-color: #0B0452;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.multiselect {
+ 
+  font-size: 15px;
+  padding-bottom: 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+  outline: none;
+}
+
+.multiselect:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.multiselect.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect > .title {
+  cursor: pointer;
+  height: 16px;
+  padding: 6px;
+}
+
+.multiselect > .title > .text {
+  max-width: 130px;
+  max-height: 25px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  line-height: 1.3em;
+}
+
+.multiselect > .title > .expand-icon,
+.multiselect > .title > .close-icon {
+  float: right;
+  border-radius: 50%;
+  padding: 0 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  transition: 0.2s;
+  display: none;
+}
+
+.multiselect.selection > .title > .expand-icon {
+  display: none;
+}
+
+.multiselect > .title > .expand-icon,
+.multiselect.selection > .title > .close-icon {
+  display: block;
+}
+
+.multiselect > .title > .close-icon:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgb(203, 32, 32);
+  color: #fff;
+}
+
+.multiselect > .container1 {
+
+  overflow: auto;
+  margin-top: 4px;
+  margin-left: -1px;
+  
+  transition: 0.2s;
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  border: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.multiselect.active > .container1 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 0;
+}
+
+
+
+.multiselect > .container1 > option {
+  display: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect > .container1 > option.selected {
+  background: #0B0452;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.multiselect > .container1 > option:hover {
+  background: #0B0452;
+  color: white;
+}
+
+.multiselect.active > .container1 > option {
+  display: block;
+}
+
+
+
+.noselect2 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.multiselect2 {
+ 
+  font-size: 15px;
+  padding-bottom: 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+  outline: none;
+}
+
+.multiselect2:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.multiselect2.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect2 > .title {
+  cursor: pointer;
+  height: 16px;
+  padding: 6px;
+}
+
+.multiselect2 > .title > .text {
+  max-width: 130px;
+  max-height: 25px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  line-height: 1.3em;
+}
+
+.multiselect2 > .title > .expand-icon,
+.multiselect2 > .title > .close-icon1 {
+  float: right;
+  border-radius: 50%;
+  padding: 0 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  transition: 0.2s;
+  display: none;
+}
+
+.multiselect2.selection > .title > .expand-icon {
+  display: none;
+}
+
+.multiselect2 > .title > .expand-icon,
+.multiselect2.selection > .title > .close-icon1 {
+  display: block;
+}
+
+.multiselect2 > .title > .close-icon1:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgb(203, 32, 32);
+  color: #fff;
+}
+
+.multiselect2 > .container2 {
+
+  overflow: auto;
+  margin-top: 4px;
+  margin-left: -1px;
+  
+  transition: 0.2s;
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  border: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.multiselect2.active > .container2 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 0;
+}
+
+
+
+.multiselect2 > .container2 > option {
+  display: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect2 > .container2 > option.selected {
+  background: #0B0452;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.multiselect2 > .container2 > option:hover {
+  background: #0B0452;
+  color: white;
+}
+
+.multiselect2.active > .container2 > option {
+  display: block;
+}
+
+
+
+.noselect3 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.multiselect3 {
+ 
+  font-size: 15px;
+  padding-bottom: 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+  outline: none;
+}
+
+.multiselect3:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.multiselect3.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect3 > .title {
+  cursor: pointer;
+  height: 16px;
+  padding: 6px;
+}
+
+.multiselect3 > .title > .text {
+  max-width: 130px;
+  max-height: 25px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  line-height: 1.3em;
+}
+
+.multiselect3 > .title > .expand-icon,
+.multiselect3 > .title > .close-icon2 {
+  float: right;
+  border-radius: 50%;
+  padding: 0 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  transition: 0.2s;
+  display: none;
+}
+
+.multiselect3.selection > .title > .expand-icon {
+  display: none;
+}
+
+.multiselect3 > .title > .expand-icon,
+.multiselect3.selection > .title > .close-icon2 {
+  display: block;
+}
+
+.multiselect3 > .title > .close-icon2:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgb(203, 32, 32);
+  color: #fff;
+}
+
+.multiselect3 > .container3 {
+
+  overflow: auto;
+  margin-top: 4px;
+  margin-left: -1px;
+  
+  transition: 0.2s;
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  border: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.multiselect3.active > .container3 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 0;
+}
+
+
+
+.multiselect3 > .container3 > option {
+  display: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect3 > .container3 > option.selected {
+  background: #0B0452;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.multiselect3 > .container3 > option:hover {
+  background: #0B0452;
+  color: white;
+}
+
+.multiselect3.active > .container3 > option {
+  display: block;
+}
+
+
+
+.noselect4 {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.multiselect4 {
+ 
+  font-size: 15px;
+  padding-bottom: 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+  outline: none;
+}
+
+.multiselect4:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.multiselect4.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect4 > .title {
+  cursor: pointer;
+  height: 16px;
+  padding: 6px;
+}
+
+.multiselect4 > .title > .text {
+  max-width: 130px;
+  max-height: 25px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  line-height: 1.3em;
+}
+
+.multiselect4 > .title > .expand-icon,
+.multiselect4 > .title > .close-icon3 {
+  float: right;
+  border-radius: 50%;
+  padding: 0 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  transition: 0.2s;
+  display: none;
+}
+
+.multiselect4.selection > .title > .expand-icon {
+  display: none;
+}
+
+.multiselect4 > .title > .expand-icon,
+.multiselect4.selection > .title > .close-icon3 {
+  display: block;
+}
+
+.multiselect4 > .title > .close-icon3:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgb(203, 32, 32);
+  color: #fff;
+}
+
+.multiselect4 > .container4 {
+
+  overflow: auto;
+  margin-top: 4px;
+  margin-left: -1px;
+  
+  transition: 0.2s;
+  position: absolute;
+  z-index: 99;
+  background: #fff;
+  border: 1px solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.multiselect4.active > .container4 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top: 0;
+}
+
+
+
+.multiselect4 > .container4 > option {
+  display: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.multiselect4 > .container4 > option.selected {
+  background: #0B0452;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.multiselect4 > .container4 > option:hover {
+  background: #0B0452;
+  color: white;
+}
+
+.multiselect4.active > .container4 > option {
+  display: block;
+}
+
+
+.name a{
+  color: black;
+  
+}
+.name a:hover{
+  color: white;
+  background-color: #0B0452;
+  
+}
+.name a:focus{
+  color: white;
+  background-color: #0B0452;
+  
+}
+.tabheight{
+  
+  background-color: white;
+  height: 600px;
+  overflow: auto;
+}
+.chatheading{
+  background-color: white;
+}
+.chat{
+  height: 500px;
+  overflow: auto;
+}
+.send{
+  background-color: #0B0452;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  width: max-content;
+}
+.recieve{
+  background-color: #3399CC;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  width: max-content;
+}
+.message{
+  height: 40px;
+  border-radius: 20px;
+ 
+}
+.sending{
+  
+  height: 40px;
+  border-radius: 100px;
+  padding: 0px 30px 0px 30px;
+ 
+}
